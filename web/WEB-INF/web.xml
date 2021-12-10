@@ -3,4 +3,35 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <servlet>
+        <servlet-name>my</servlet-name>
+        <servlet-class>com.demo.Myservlet</servlet-class>
+        <load-on-startup>0</load-on-startup>
+        <!-- 填写0的话就是容器启动时候加载此servlet，正数越小，越先加载 -->
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>my</servlet-name>
+        <url-pattern>/myservlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>http</servlet-name>
+        <servlet-class>com.demo.HttpServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>http</servlet-name>
+        <url-pattern>/http</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>gen</servlet-name>
+        <servlet-class>com.demo.GenServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>gen</servlet-name>
+        <url-pattern>/*</url-pattern>
+        <!-- 值得注意的是：/*和/都是匹配所有请求，包含服务器上所有资源。但是/不匹配jsp -->
+    </servlet-mapping>
+
 </web-app>
