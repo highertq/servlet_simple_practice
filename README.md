@@ -13,6 +13,7 @@ hard hard and try again
 ![img_3.png](img_3.png)
 ![img_4.png](img_4.png)
 ## web.xml配置servlet
+
 ```
 <servlet>
         <servlet-name>my</servlet-name>
@@ -24,11 +25,12 @@ hard hard and try again
         <url-pattern>/myservlet</url-pattern>
     </servlet-mapping>
 ```
-<servlet>：
+
+servlet ：
 
 servlet-name是别名，关键是servlet-class（带包名）要配置正确！
 
-<servlet-mapping>：
+servlet-mapping：
 
 url-pattern定义匹配规则，取值说明：
  + 精确匹配 /具体的名称 只有url路径是具体的名称的时候才会触发Servlet 
