@@ -28,7 +28,7 @@ hard hard and try again
 
 servlet ：
 
-servlet-name是别名，关键是servlet-class（带包名）要配置正确！
+ + servlet-name是别名，关键是servlet-class（带包名）要配置正确！
 
 servlet-mapping：
 
@@ -39,10 +39,10 @@ url-pattern定义匹配规则，取值说明：
  + 通配符匹配 / 匹配所有请求，包含服务器的所有资源，不包括.jsp
  
 load-on-startup：
-1. 元素标记容器是否应该在web应用程序启动的时候就加载这个servlet。
-2. 它的值必须是一个整数，表示servlet被加载的先后顺序。
-3. 如果该元素的值为负数或者没有设置时，则容器会当Servlet被请求时再加载。
-4. 如果值为正整数或者0时，表示容器在应用启动时就加载并初始化这个servlet，值越小，servlet的优先级越高，就越先被加
++ 元素标记容器是否应该在web应用程序启动的时候就加载这个servlet。
++ 它的值必须是一个整数，表示servlet被加载的先后顺序。
++ 如果该元素的值为负数或者没有设置时，则容器会当Servlet被请求时再加载。
++ 如果值为正整数或者0时，表示容器在应用启动时就加载并初始化这个servlet，值越小，servlet的优先级越高，就越先被加
 载。值相同时，容器就会自己选择顺序来加载。
 
 ## 注解配置servlet
